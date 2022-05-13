@@ -12,10 +12,17 @@
  * @package Ribonucleic
  */
 
-get_header();
-?>
-	<div class="with-sidebar-right">
-	<main class="center" id="primary" class="site-main">
+get_header();?>
+<div class="cover">
+	<div>
+<?php get_template_part( 'template-parts/header', 'header' );?>
+</div>
+<div>
+<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+</div>
+</div>
+	
+	<main id="primary" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -35,6 +42,4 @@ get_header();
 
 <?php
 get_sidebar();
-?></div>
-<?php
 get_footer();

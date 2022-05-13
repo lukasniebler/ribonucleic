@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+.footer-wrapper {
+    margin-top: var(--s2, 1.5rem);
+    padding-bottom: var(--s1, 1.5rem);
+    background-color: $primary-background-color;
+}
+
+.footer-wrapper > footer a {
+    text-decoration: none;
+    color: $primary-text-color;
+    font-weight: 600;
+    display: inline-block;
+    padding: 1.5rem;
+    color: $text-light;
+}
+
+.footer-wrapper > footer a:hover {
+    background-color: $primary-text-contrast;
+    color: $primary-hover-color;
+}

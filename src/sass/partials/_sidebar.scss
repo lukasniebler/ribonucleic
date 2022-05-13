@@ -10,7 +10,7 @@
 }
 
 .sidebar li {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $primary-border-color;
 }
 
 .sidebar li:last-child {
@@ -23,14 +23,14 @@
 
 .sidebar ul a {
     text-decoration: none;
-    color: black;
+    color: $primary-text-color;
     display: inline-block;
     padding: var(--s1, 1.5rem);
     font-weight: 600;
 }
 
 .sidebar li:hover {
-    background-color: black;
+    background-color: $primary-hover-color;
     a {
         color: white;
     }

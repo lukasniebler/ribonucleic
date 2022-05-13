@@ -14,7 +14,7 @@ header nav ul {
 header nav ul li a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: white;
   padding: var(--s1, 1.5rem);
 }
 header nav ul li:hover {
@@ -27,7 +27,7 @@ header nav ul li:hover a {
 .site-header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-basis: auto;
   padding: 0.5rem var(--s1, 1.5rem);
@@ -36,7 +36,7 @@ header nav ul li:hover a {
   font-weight: 600;
   font-size: calc(1.5rem + 0.125vw);
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 .site-header .site-title a:hover {
   text-decoration: underline;
@@ -44,7 +44,11 @@ header nav ul li:hover a {
 
 .site-header {
   background-color: transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
+}
+
+.entry-title {
+  padding-left: var(--s1, 1.5rem);
 }
 
 .center {
@@ -94,7 +98,7 @@ header nav ul li:hover a {
   flex-direction: column;
   min-block-size: 20vh;
   padding: 3rem;
-  padding-left: calc(3rem + 0.5vw);
+  padding-left: calc(3rem + 2vw);
   background-color: black;
   color: white;
 }
@@ -113,6 +117,7 @@ header nav ul li:hover a {
 
 .cover > h1 {
   margin-block: auto;
+  padding: 0.5rem var(--s1, 1.5rem);
 }
 
 main {
@@ -155,6 +160,26 @@ main {
   color: white;
 }
 
+.footer-wrapper {
+  margin-top: var(--s2, 1.5rem);
+  padding-bottom: var(--s1, 1.5rem);
+  background-color: black;
+}
+
+.footer-wrapper > footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  display: inline-block;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.footer-wrapper > footer a:hover {
+  background-color: white;
+  color: black;
+}
+
 :root {
   --measure: 60ch;
   --lineheight: 1.5rem;
@@ -170,7 +195,6 @@ body {
 
 * {
   box-sizing: border-box;
-  max-inline-size: var(--measure);
   font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
   font-size: var(--fontsz2, 1rem);
 }
@@ -274,26 +298,28 @@ footer {
   font-size: 2em;
 }
 
-footer {
-  margin-top: var(--s2, 1.5rem);
-  padding-bottom: var(--s1, 1.5rem);
-}
-
-footer a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  display: inline-block;
-  padding: 1.5rem;
-}
-
-footer a:hover {
-  background-color: black;
-  color: white;
-}
-
 aside {
   margin-right: var(--s2, 3rem);
+}
+
+.entry-content p:not(p img) {
+  max-inline-size: var(--measure);
+  box-sizing: content-box;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.entry-content img {
+  max-width: calc(60ch + 40vw);
+  height: auto;
+  margin: var(--s2, 3rem) 0;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .entry-content img {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

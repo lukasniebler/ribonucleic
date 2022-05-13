@@ -17,14 +17,14 @@ header nav ul {
     li a {
         display: block;
         text-decoration: none;
-        color: black;
+        color: $primary-text-contrast;
 
         padding: var(--s1, 1.5rem);
     }
     li:hover {
-        background-color: black;
+        background-color: $primary-hover-color;
         a {
-            color: white;
+            color: $primary-text-contrast;
         }
     }
 }
@@ -32,7 +32,7 @@ header nav ul {
 .site-header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-basis: auto;
 
@@ -44,7 +44,7 @@ header nav ul {
             font-weight: 600;
             font-size: $adaptive-font-size;
             text-decoration: none;
-            color: black;
+            color: $text-light;
         }
         a:hover {
             text-decoration: underline;
@@ -55,5 +55,9 @@ header nav ul {
 
 .site-header {
     background-color: transparent;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $text-light;
+}
+
+.entry-title {
+    padding-left: var(--s1, 1.5rem);
 }

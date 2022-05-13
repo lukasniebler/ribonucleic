@@ -3,6 +3,7 @@
 @use "partials/functional-classes" as *;
 @use "partials/main-content" as *;
 @use "partials/sidebar" as *;
+@use "partials/footer" as *;
 
 :root {
     --measure: 60ch;
@@ -19,7 +20,6 @@ body {
 
 * {
     box-sizing: border-box;
-    max-inline-size: var(--measure);
     font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
     font-size: var(--fontsz2, 1rem);
 }
@@ -123,25 +123,28 @@ footer {
     font-size: 2em;
 }
 
-
-footer {
-    margin-top: var(--s2, 1.5rem);
-    padding-bottom: var(--s1, 1.5rem);
-}
-
-footer a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    display: inline-block;
-    padding: 1.5rem;
-}
-
-footer a:hover {
-    background-color: black;
-    color: white;
-}
-
 aside {
     margin-right: var(--s2, 3rem);
+}
+
+.entry-content {
+    p:not(p img) {
+        max-inline-size: var(--measure);
+        box-sizing: content-box;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        max-width: calc(60ch + 40vw);
+        height: auto;
+        margin: var(--s2, 3rem) 0;
+        overflow: hidden;
+    }
+    @media (max-width: 800px) {
+        img {
+            max-width: 100%;
+        }
+    }
 }

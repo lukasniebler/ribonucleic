@@ -38,9 +38,8 @@ header nav ul {
 
     padding: 0.5rem var(--s1, 1.5rem);
 
-    .site-title{
-        a{
-
+    .site-title {
+        a {
             font-weight: 600;
             font-size: $adaptive-font-size;
             text-decoration: none;
@@ -49,7 +48,6 @@ header nav ul {
         a:hover {
             text-decoration: underline;
         }
-        
     }
 }
 
@@ -61,3 +59,11 @@ header nav ul {
 .entry-title {
     padding-left: var(--s1, 1.5rem);
 }
+
+.header-featured-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+

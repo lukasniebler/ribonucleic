@@ -51,6 +51,12 @@ header nav ul li:hover a {
   padding-left: var(--s1, 1.5rem);
 }
 
+.header-featured-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
 .center {
   box-sizing: content-box;
   margin-inline: auto;

@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+.sidebar{
+    margin-top: var(--s2, 3rem);
+}
+
+.sidebar h2,
+.sidebar h3 {
+    font-size: 2em;
+}
+
+.sidebar li {
+    border-bottom: 2px solid black;
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: var(--s1, 1.5rem);
+    font-weight: 600;
+}
+
+.sidebar li:hover {
+    background-color: black;
+    a {
+        color: white;
+    }
+}

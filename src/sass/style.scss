@@ -1,83 +1,147 @@
-@use 'partials/variables' as *;
+@use "partials/variables" as *;
+@use "partials/header" as *;
+@use "partials/functional-classes" as *;
+@use "partials/main-content" as *;
+@use "partials/sidebar" as *;
 
-*{
-    margin: 0;
+:root {
+    --measure: 60ch;
+    --lineheight: 1.5rem;
+    --fontsz2: calc(1rem + 0.125vw);
+    --s1: var(--lineheight, 1.5rem);
+    --s2: calc(var(--s1, 1.5rem) * 2);
+}
+
+body {
     padding: 0;
+    margin: 0;
+}
+
+* {
     box-sizing: border-box;
+    max-inline-size: var(--measure);
+    font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+    font-size: var(--fontsz2, 1rem);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+img,
+figure,
+footer {
+    max-inline-size: none;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25 em;
+}
+
+h5 {
+    font-size: 1.125 em;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-bottom: var(--s2, 3rem);
+}
+
+.search img {
+    float: left;
+    margin-right: var(--s1, 1.5rem);
+    margin-bottom: var(--s1, 1.5rem);
+    margin-top: var(--s1, 1.5rem);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+    max-inline-size: none;
+}
+
+.max-inline-size\:measure {
+    max-inline-size: var(--measure);
+}
+
+.max-inline-size\:measure\/2 {
+    max-inline-size: calc(var(--measure) / 2);
+}
+
+.with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s1);
+}
+
+.with-sidebar > :last-child {
+    flex-grow: 1;
+}
+
+.with-sidebar > :first-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+}
+
+.skip-to-content-link {
+    color: black;
+    margin-top: var(--s2, 3rem);
+    margin-bottom: var(--s2, 3rem);
+    font-weight: 500;
+}
+
+.adaptive-font-area {
+    font-size: var(--fontsz2, 1.5rem);
+}
+
+.adaptive-font-area h1 {
+    font-size: 4em;
+    margin-bottom: var(--s2, 3rem);
+}
+
+.adaptive-font-area h2,
+.adaptive-font-area h3 {
+    font-size: 2em;
 }
 
 
-.main-navigation {
-
-    font-family: $font-stack;
-    font-size: 1em;
-
-    a {
-        text-decoration: none;
-    }
-
-    ul {
-        display: flex;
-        background: $primary-color;
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-    }
-
-    li {
-        display: block;
-        transition-duration: 0.5s;
-        padding: 0 1rem;
-        color: $text-light;
-        padding: 1rem;
-        position: relative;
-        text-decoration: none;
-    }
-
-    li a {
-        color: $text-light;
-    }
-
-    li:hover,
-    li:focus-within {
-        cursor: pointer;
-        background: $primary-color-dark;
-    }
-
-    ul li ul {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        transition: all 0.5s ease;
-        margin-top: 1rem;
-        left: 0;
-        display: none;
-        width: 300px;
-    }
-
-    ul li:hover > ul,
-    ul li:focus-within > ul,
-    ul li ul:hover {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-
-    ul li ul li {
-        clear: both;
-        width: 100%;
-    }
-
-    ul li ul li ul {
-        background-color: $primary-color-darkest;
-        z-index: 1;
-
-        margin-left: 300px;
-        margin-top: -1rem;
-    }
-
-    ul li ul li ul li {
-        background-color: $primary-color-darkest;
-    }
+footer {
+    margin-top: var(--s2, 1.5rem);
+    padding-bottom: var(--s1, 1.5rem);
 }
 
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    display: inline-block;
+    padding: 1.5rem;
+}
+
+footer a:hover {
+    background-color: black;
+    color: white;
+}
+
+aside {
+    margin-right: var(--s2, 3rem);
+}

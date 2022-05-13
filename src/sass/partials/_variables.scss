@@ -5,4 +5,8 @@ $primary-color-darkest: rgb(38, 0, 73);
 $text-color: #000;
 $text-light: #fff;
 
+$line-height: 1.5rem;
+$space: 1.5rem;
+
 $font-stack: 'Roboto', sans-serif;
+$adaptive-font-size: calc(1.5rem + 0.125vw);

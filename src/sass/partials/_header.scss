@@ -22,9 +22,9 @@ header nav ul {
         padding: var(--s1, 1.5rem);
     }
     li:hover {
-        background-color: $primary-hover-color;
+        background-color: $primary-text-contrast;
         a {
-            color: $primary-text-contrast;
+            color: $text-color;
         }
     }
 }

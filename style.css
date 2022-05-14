@@ -18,10 +18,10 @@ header nav ul li a {
   padding: var(--s1, 1.5rem);
 }
 header nav ul li:hover {
-  background-color: black;
+  background-color: white;
 }
 header nav ul li:hover a {
-  color: white;
+  color: #000;
 }
 
 .site-header {
@@ -171,6 +171,9 @@ main {
   margin-top: var(--s2, 1.5rem);
   padding-bottom: var(--s1, 1.5rem);
   background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .footer-wrapper > footer a {
@@ -182,9 +185,17 @@ main {
   color: #fff;
 }
 
+.footer-wrapper > * {
+  color: white;
+}
+
 .footer-wrapper > footer a:hover {
   background-color: white;
   color: black;
+}
+
+.site-footer {
+  margin: var(--s1, 1.5rem) auto;
 }
 
 :root {

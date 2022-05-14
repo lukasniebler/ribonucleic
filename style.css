@@ -49,6 +49,7 @@ header nav ul li:hover a {
 
 .entry-title {
   padding-left: var(--s1, 1.5rem);
+  background-color: #0000005f;
 }
 
 .header-featured-image {
@@ -218,7 +219,8 @@ footer {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: calc(2em + 2vw);
+  max-width: 20ch;
 }
 
 h2 {
@@ -284,7 +286,7 @@ footer {
 }
 
 .skip-to-content-link {
-  color: black;
+  color: white;
   margin-top: var(--s2, 3rem);
   margin-bottom: var(--s2, 3rem);
   font-weight: 500;
@@ -326,6 +328,34 @@ aside {
   .entry-content img {
     max-width: 100%;
   }
+}
+
+.author-info {
+  color: white;
+}
+
+.author-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--s1, 1.5rem);
+  padding-left: var(--s1, 1.5rem);
+}
+
+.author-image > .avatar {
+  border-radius: 50%;
+  max-width: var(--s2, 3rem);
+  height: auto;
+}
+
+.author-info {
+  flex-basis: auto;
+}
+
+.author-info > h3 {
+  font-size: calc((1.5rem + 0.125vw) * 0.75);
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */

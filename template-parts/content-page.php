@@ -16,9 +16,7 @@
 	</header>
 -->
 
-	<?php ribonucleic_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-content center">
 		<?php
 		the_content();
 

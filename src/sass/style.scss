@@ -41,6 +41,11 @@ h1 {
     max-width: 20ch;
 }
 
+h1 > * {
+    font-size: 1em;
+    max-width: 20ch;
+}
+
 h2 {
     font-size: 2em;
 }
@@ -128,27 +133,7 @@ aside {
     margin-right: var(--s2, 3rem);
 }
 
-.entry-content {
-    p:not(p img) {
-        max-inline-size: var(--measure);
-        box-sizing: content-box;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    img {
-        max-width: calc(60ch + 40vw);
-        height: auto;
-        margin: var(--s2, 3rem) 0;
-        overflow: hidden;
-    }
-    @media (max-width: 800px) {
-        img {
-            max-width: 100%;
-        }
-    }
-}
+
 
 .author-info{
     color: white;
